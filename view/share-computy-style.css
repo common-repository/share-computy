@@ -1,0 +1,239 @@
+#share_computy{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 15px 0 0 0;
+}
+.title_share_computy{
+    font-size: 15px;
+    font-weight: 500;
+}
+#share_computy .share-item{
+    position: relative;
+    height: 26px;
+    background: #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    width: auto;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    padding: 0 7px 0 5px;
+    margin: 5px;
+}
+#share_computy .share-item:hover{
+    opacity: 0.8;
+}
+#share_computy .share-item:focus{
+    outline: none!important;
+    text-decoration: none!important;
+}
+
+#share_computy .share-item .value{
+    margin-left: 10px;
+    font-family: sans-serif;
+}
+#share_computy .share-item.vk,
+#share_computy .share-item.vk:focus,
+#share_computy .share-item.vk:active{
+    background: #597da3!important;
+}
+#share_computy .share-item.vk .icon{
+    background-image: url("img/pack1/vk.svg");
+    width: 17px;
+    height: 17px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#share_computy .share-item.fb,
+#share_computy .share-item.fb:focus,
+#share_computy .share-item.fb:active{
+    background: #3b5998!important;
+}
+#share_computy .share-item.fb .icon{
+    background-image: url("img/pack1/fb.svg");
+    width: 17px;
+    height: 17px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#share_computy .share-item.ok,
+#share_computy .share-item.ok:focus,
+#share_computy .share-item.ok:active{
+    background: #ed812b!important;
+}
+#share_computy .share-item.ok .icon{
+    background-image: url("img/pack1/ok.svg");
+    width: 17px;
+    height: 17px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#share_computy .share-item.tw,
+#share_computy .share-item.tw:focus,
+#share_computy .share-item.tw:active{
+    background: #00ACED!important;
+}
+#share_computy .share-item.tw .icon{
+    background-image: url("img/pack1/tw.svg");
+    width: 17px;
+    height: 17px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#share_computy .share-item.tg,
+#share_computy .share-item.tg:focus,
+#share_computy .share-item.tg:active{
+    background: #039be5!important;
+}
+#share_computy .share-item.tg .icon{
+    background-image: url("img/pack1/tg.svg");
+    width: 17px;
+    height: 17px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.disabled_computy{
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: no-drop;
+}
+#share_computy .share-item.whatsapp,
+#share_computy .share-item.whatsapp:focus,
+#share_computy .share-item.whatsapp:active{
+    background: #4CAF50!important;
+}
+#share_computy .share-item.whatsapp .icon{
+    background-image: url("img/pack1/whatsapp.svg");
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#share_computy .share-item.viber,
+#share_computy .share-item.viber:focus,
+#share_computy .share-item.viber:active{
+    background: #665CAC!important;
+}
+#share_computy .share-item.viber .icon{
+    width: 15px;
+    height: 15px;
+    background: url("img/pack1/viber.svg") no-repeat;
+    background-size: contain;
+}
+#share_computy .share-item [data-value="0"] {
+    margin-left: 0;
+    font-size: 0;
+}
+
+
+
+.share-item::before {
+    content: '';
+    opacity: 1;
+    -webkit-transition: opacity 0.4s ease-out;
+    -o-transition: opacity 0.4s ease-out;
+    -moz-transition: opacity 0.4s ease-out;
+    transition: opacity 0.4s ease-out;
+    display: block;
+    position: absolute;
+}
+.share-item:hover::before {
+    content: attr(data-title);
+    position: absolute;
+    z-index: 2;
+    top: -24px;
+    left: 50%;
+    width: 120px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    height: 18px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    opacity: 1;
+    text-align: center;
+    color: #333;
+}
+.cliick::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url("img/busy.svg");
+   background-size: cover;
+    -webkit-animation-name: rotation;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotation;
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -o-animation-name: rotation;
+    -o-animation-duration: 1s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+    animation-name: rotation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-webkit-keyframes rotation {
+    0% {-webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);}
+}
+@-moz-keyframes rotation {
+    0% {-webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);}
+}
+@-o-keyframes rotation {
+    0% {-webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);}
+}
+@keyframes rotation {
+    0% {-webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);
+        -moz-transform:rotate(720deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);}
+}
+.blednost{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+@media (max-width: 480px){
+    .title_share_computy{
+        width: 100%;
+        text-align: center;
+    }
+}

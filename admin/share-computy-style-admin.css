@@ -1,0 +1,8 @@
+.share-computy-admin > h2:first-child {
+    padding: 0 7px 0 20px;
+    background: url(img/logo-svg.svg) no-repeat;
+    background-size: contain;
+}
+.share-computy-admin h2 small {
+    color: #979696;
+}
